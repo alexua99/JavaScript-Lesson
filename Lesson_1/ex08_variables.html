@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+<script>
+
+
+var message; // Объявляем переменную
+message = 'Hello!'; // Присваиваем значение
+
+var user = 'John', age = 25, message = 'Hello';
+
+
+message = 'Hello!';
+
+message = 'World!'; // заменяем значение
+alert( message ); // выводим значение
+
+var hello = 'Hello world!';
+var message;
+
+message = hello; // копируем значение
+
+alert( hello ); // Hello world!
+alert( message ); // Hello world!
+
+
+// Имя может состоять из: букв, цифр, символов $ и _
+// Первый символ не должен быть цифрой.
+
+var myName;
+var test123;
+
+var $ = 1; // объявили переменную с именем '$'
+var _ = 2; // переменная с именем '_'
+
+alert( $ + _ ); // 3
+
+// var 1a; // начало не может быть цифрой
+
+// var my-name; // дефис '-' не является разрешенным символом
+// Регистр букв имеет значение
+// Переменные apple и AppLE – две разные переменные.
+
+// Кириллица
+var имя = "Коля";
+alert( имя ); // "Коля"
+
+// camelCase 
+var currentUserName = "Alex";
+
+// snake_case
+var current_User_Name = "Rita";
+
+// kebab-case
+// var current-User-Name = "Jack"; // Ошибка
+
+// Зарезервированные имена
+/* 
+var return = 5; // ошибка
+alert(return);
+*/
+ 
+ //В старом стандарте JavaScript разрешалось создавать переменную и без var, просто присвоив ей значение:
+
+num = 5; // переменная num будет создана, если ее не было
+
+// var vs ES6 const, let
+
+// Константы
+var COLOR_RED = "#F00";
+var COLOR_GREEN = "#0F0";
+var COLOR_BLUE = "#00F";
+var COLOR_ORANGE = "#FF7F00";
+
+var color = COLOR_ORANGE;
+alert( color ); // #FF7F00
+
+
+</script>
+
+</body>
+
+</html>
