@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+    <title>Условная конструкция if else</title>
+
+    <script>
+
+        var login = "Admin";
+        var password = "0000";
+        var count = 3;
+
+        var userLogin, userPassword;
+
+        do {
+
+            if (userLogin = prompt("Введите логин\nпопыток осталось: " + count)) {
+
+                if (userPassword = prompt("Введите пароль\nпопыток осталось: " + count)) {
+                    if (userLogin == login && userPassword == password) {
+                        console.log("Здравствуйте, Админ. Вы вошли в систему.");
+                        break;
+                    }
+                    else {
+                        console.log("Ошибка доступа! Неверный логин или пароль!");
+                        if (count == 1) {
+                            break;
+                        }
+                        console.log("Повторите попытку.");
+                    }
+                }
+                else {
+                    console.log("Вход не выполнен.");
+                    break;
+                }
+            }
+            else {
+                console.log("Вход не выполнен.");
+                break;
+            }
+
+            count--;
+
+        } while (true);
+
+var b = prompt('ds');
+        if (b > 0){
+            document.write("kx + " + b)
+        }
+        else {
+            document.write('y = kx ' + b);
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

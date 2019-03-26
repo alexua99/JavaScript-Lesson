@@ -1,0 +1,31 @@
+﻿<html>
+<head>
+    <title>Оператор break</title>
+
+    <script>
+
+        var iteration_count = +prompt("Сколько итераций провести?");
+        var exit = +prompt("На какой итерации выйти из цикла?");
+
+        for (var i = 0; i < iteration_count; i++) {
+            if (i == exit) {
+                console.log("Работа цикла завершена принудительно");
+                console.log("***");
+                break;
+            }
+            else {
+                console.log(i);
+            }
+        }
+
+        console.log("Продолжение выполнения кода");
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>
