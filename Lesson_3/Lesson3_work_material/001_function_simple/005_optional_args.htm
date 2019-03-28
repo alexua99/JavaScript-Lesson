@@ -1,0 +1,38 @@
+﻿<!--
+    В языке JavaScript при вызове функции количество параметров не обязательно должно совпадать с количеством параметров при объявлении.
+     Параметры, которым при вызове не были переданы значения, будут равны undefined
+-->
+
+<html>
+<head>
+    <title>Необязательные аргументы</title>
+
+    <script>
+
+        function print(product, count) {
+
+            // if (count == undefined) {
+            //     count = 5;
+            // }
+
+            for (var i = 0; i < count; i++) {
+                console.log(product + " " + (i + 1));
+            }
+
+            console.log("***********************");
+
+        }
+        // Вызов функций.
+
+        print("phone");//product == "phone"; count == undefined
+        print("notebook", 7);
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

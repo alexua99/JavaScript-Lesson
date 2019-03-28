@@ -1,0 +1,41 @@
+﻿<!--
+    При стандартном объявлении (Function Declaration), переопределение функции осуществляяется до выполнения кода, то есть на момент исполнения актуальной может быть
+    только последняя переопределенная версия.
+
+    Функции-литералы, в отличие от стандартного объявления, могут быть использованы для условного объявления.
+-->
+
+<html>
+<head>
+    <title>Функции-литералы пример</title>
+
+    <script>
+		"use strict"
+
+ //answer();
+
+        var login = prompt("Enter login");
+        var password = prompt("Enter password");
+
+        if (login == "Admin" && password == "0000") {
+            function answer() {
+                alert("Hello, admin");
+            }
+        }
+        else {
+            function answer() {
+                alert("Hello, user");
+            }
+        }
+
+        answer();
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

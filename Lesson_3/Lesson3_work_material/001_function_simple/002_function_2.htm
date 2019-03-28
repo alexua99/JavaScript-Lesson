@@ -1,0 +1,37 @@
+﻿<!--
+    В теле функции можно работать с переменными, читать и изменять их.
+-->
+
+<html>
+<head>
+    <title>Функции в JavaScript</title>
+
+    <script>
+
+        var login;
+        var password;
+
+        function user_info() {
+            login = prompt("Введите логин:");
+            password = prompt("Введите пароль:");
+        };
+
+        function show_user_info() {
+            document.write("Login: " + login + "<br />");
+            document.write("Password: " + password + "<br />");
+        };
+
+        // Вызов функций.
+
+        user_info();
+        show_user_info();
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

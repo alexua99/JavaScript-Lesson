@@ -1,0 +1,33 @@
+﻿<!--
+    Вложенные функции.
+-->
+
+<html>
+<head>
+    <title>Вложенные функции</title>
+
+    <script type="text/javascript">
+
+        function outer() {
+
+            function inner() { // Вложенная функция.
+                console.log("Inner function");
+            }
+
+            inner(); // Вызов функции.
+        }
+
+        outer();     // Вызов функции.
+
+        inner();   // Вызов недоступен.
+
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

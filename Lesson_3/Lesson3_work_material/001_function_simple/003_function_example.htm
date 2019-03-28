@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+    <title>Функции в JavaScript</title>
+
+    <script>
+
+        var login;
+        var password;
+
+        function user_info() {
+            login = prompt("Введите логин:");
+            password = prompt("Введите пароль:");
+        }
+
+        function show_user_info() {
+            document.write("Login: " + login + "<br />");
+            document.write("Password: " + password + "<br />");
+        }
+
+        do {
+            user_info();
+            show_user_info();
+            var repeater = confirm("Пройти заполнение еще раз?");
+        } while (repeater);
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

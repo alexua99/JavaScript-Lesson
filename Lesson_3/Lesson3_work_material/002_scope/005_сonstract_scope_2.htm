@@ -1,0 +1,38 @@
+﻿<!--
+    Область видимости не ограничивается телом условной или циклической конструкции.
+-->
+
+<html>
+<head>
+    <title>Область видимости внутри конструкций</title>
+
+    <script>
+
+        function scope_test() {
+
+            for (var counter = 0; counter < 3; counter++) {
+                console.log(counter);
+            }
+
+            console.log("*********************************");
+
+            // counter - счетчик итераций цикла доступна вне тела цикла - for.
+            console.log(counter);
+
+        }
+
+        scope_test();
+
+        // ОШИБКА.
+        // Счетчик итераций цикла - counter, не доступен за пределами тела функции, содержащей цикл.
+        console.log(counter);
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>
