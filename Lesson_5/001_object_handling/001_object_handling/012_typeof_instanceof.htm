@@ -1,0 +1,57 @@
+﻿<!--
+    Оператор instanceof используется для проверки, принадлежит ли объект данному типу. 
+    В левой части оператора instanceof указывается проверяемый объект, а с правой - функция-конструктор для проверки:   
+        
+        var isInstance = object instanceof ObjectType
+
+    
+    Оператор typeof возвращает строку, содержащую информацию о типе операнда: typeof operand.
+        
+       | Тип	              | Результат    |
+       | ---------------------|--------------|
+       | Undefined	          | "undefined"  |
+       | Null	              | "object"     |
+       | Boolean	          | "boolean"    |
+       | Number	              | "number"     |
+       | String	              | "string"     |
+       | Function	          | "function"   |
+       | Любой другой объект  | "object"     |
+        ---------------------- --------------
+
+-->
+
+<html>
+<head>
+    <title>Проверка типа данных</title>
+
+    <script type="text/javascript">
+
+        function myFunc() { console.log("123"); }
+
+        var car = {
+            color: "black",
+            weight: 3000,
+            go: function () { alert("GO!"); },
+        }
+
+        console.log("car:");
+        console.log(car instanceof Object);
+        console.log(typeof car);
+
+        console.log("\nmyFunc:");
+        console.log(myFunc instanceof Object);
+        console.log(typeof myFunc);
+        
+
+        var a = 1;
+        console.log(a instanceof Number);
+        console.log(typeof a)
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

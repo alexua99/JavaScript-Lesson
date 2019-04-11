@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Arrays</title>
+</head>
+
+<body>
+<h1>ITEA</h1>
+<ul id="list">
+</ul>
+<script>
+	// ITEA jsCourses
+	var jsCourses = ["JS Basic", "JS Advanced", "JS Professional", "React", "Angular", "Vue", "Node"]	
+	
+//	jsCourses.push("TypeScript");
+//	var el = jsCourses.pop();
+//	alert(el);
+
+//	jsCourses.unshift("JS 4 Children");
+//	var el = jsCourses.shift();
+//	alert(el);
+
+
+//	alert(jsCourses[5]);
+	
+//	jsCourses.splice(5, 2);
+
+//	for (var i = 0; i < jsCourses.length; i++) {
+//		var newEl = document.createElement("li");
+//		newEl.innerText = jsCourses[i];
+//		list.appendChild(newEl);
+	//}
+	
+//	jsCourses.forEach(function(course) {
+//		var newEl = document.createElement("li");
+//		newEl.innerText = course;
+//		list.appendChild(newEl);
+//	});
+	
+//	jsCourses = jsCourses.map(function(course) {
+//		if (course === "Node") {
+//			course += " - My Favorite course";
+//		}
+//		if (course === "Vue") {
+//			course += " - I want to learn it";
+//		}
+//		return course;
+//	})
+
+	jsCourses = jsCourses.filter(function(course) {
+		return course.indexOf("JS") > -1;
+	})
+
+
+//	jsCourses.sort();
+
+	for (var i = 0; i < jsCourses.length; i++) {
+		var newEl = document.createElement("li");
+		newEl.innerText = jsCourses[i];
+		list.appendChild(newEl);
+	}
+
+
+var isJsPresent = jsCourses.some(function(course) {
+	return course.indexOf("JS") > -1;
+})
+var isAllJsPresent = jsCourses.every(function(course) {
+	return course.indexOf("JS") > -1;
+})
+
+alert(isJsPresent);
+alert(isAllJsPresent);
+
+	
+</script>
+</body>
+
+</html>

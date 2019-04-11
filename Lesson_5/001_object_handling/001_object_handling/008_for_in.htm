@@ -1,0 +1,37 @@
+﻿<!--
+    Циклическая конструкция for in, используется для перебора 
+    элементов массива или перебора свойств объекта.
+
+    for ( переменная_итерации in массив_или_обьект) { ...тело конструкции ...}
+-->
+
+<html>
+<head>
+    <title>Конструкция for in</title>
+
+    <script type="text/javascript">
+
+        var car = {
+            color: "black",
+            weight: 3000,
+            engine: {
+                cylinders: 8,
+                volume: 4.2,
+                start: function () { alert("start"); }
+            }
+        }
+
+        // Перебор значений свойств в обьекте "car"
+        for (element in car) {
+            console.log(element + " - " + car[element]);
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

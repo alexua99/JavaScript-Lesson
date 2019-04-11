@@ -1,0 +1,40 @@
+﻿<!--
+    Вложеный обьект можно создать с помощью функции конструктора.
+-->
+
+<html>
+<head>
+    <title>Создание вложеных обьектов через конструктор</title>
+
+    <script type="text/javascript">
+
+        var human = new Object();
+
+        human.firstName = "David";
+        human.secondName = "Flanagan";
+        human.age = 30;
+
+        // Создание вложенного обьекта.
+        human.occupation = new Object();
+
+        human.occupation.company = "Google";
+        human.occupation.position = "JavaScript Ninja";
+
+
+        console.log("First name: " + human.firstName);
+        console.log("Second name: " + human.secondName);
+        console.log("Age: " + human.age + " years old");
+
+        // Обращение к вложенному объекту.
+        console.log("Company: " + human.occupation.company);
+        console.log("Position: " + human.occupation.position);
+        
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

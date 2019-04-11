@@ -1,0 +1,33 @@
+﻿<html>
+<head>
+    <title>Длина массива. Свойство length. Перебор элементов массива в цикле</title>
+
+    <script>
+
+        var cars = ["Subaru", "Volvo", "BMW"];  // length == 3
+
+        // Массив увеличил свой размер на два элемента, новая длина - 5 элементов.
+        cars.length = 5;    // cars[3] == cars[4] == undefined
+
+        for (var i = 0; i < cars.length; i++) {
+            document.write(cars[i] + "<br />");
+        }
+
+        document.write("<hr />");
+
+        // Значения всех элементов, которые не попали в новую заданную длину массива, будут утеряны.
+        cars.length = 2;
+
+        for (var i = 0; i < cars.length; i++) {
+            document.write(cars[i] + "<br />");
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<html>
+<head>
+    <title>Массив из массивов</title>
+
+    <script>
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var array = new Array(15);
+
+        for (var i = 0; i < array.length; i++) {
+
+            array[i] = new Array(15);
+
+            for (var j = 0; j < array[i].length; j++) {
+                array[i][j] = String.fromCharCode(getRandomInt(65, 90));
+            }
+        }
+
+        for (var i = 0; i < array.length; i++) {
+            for (var j = 0; j < array[i].length; j++) {
+                document.write(array[i][j] + " ");
+            }
+            document.write("<br/>");
+        }
+  
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

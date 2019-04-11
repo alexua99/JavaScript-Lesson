@@ -1,0 +1,52 @@
+﻿<!--
+    Методами объекта называют функции, которые привязаны к данному объекту и могут быть использованы только в контексте взаимодействия с ним.
+    
+    При этом такая функция описывается, как функция-литерал, присвоенная свойству.
+        method: function() {.....}
+-->
+
+
+<html>
+<head>
+    <title>Методы</title>
+
+    <script type="text/javascript">
+
+        var human = {
+            firstName: "David",
+            secondName: "Flanagan",
+            age: 30,
+            companyName: "Google",
+
+            // Метод show() в блоке инициализации обьекта.
+            show: function () {
+                console.log("First name: " + this.firstName);
+                console.log("Second name: " + this.secondName);
+                console.log("Age: " + this.age + " years old");
+                console.log("Company: " + this.companyName);
+            },
+
+            // Создаем метод changeWork в блоке инициализации обьекта
+            changeWork: function (newCompany) {
+                this.companyName = newCompany;
+            }
+        }
+
+        // Вызов методов.
+
+        human.show();
+
+        human.changeWork("Apple");
+        console.log("*************************");
+        
+        human.show();
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

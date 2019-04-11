@@ -1,0 +1,42 @@
+﻿<!--
+    delete - оператор, который удаляет объект, свойство объекта или элемент массива по указанному индексу.
+    Его необходимо использовать следующим образом:
+        delete  имя_обьекта.имя_свойства;
+
+    При обращении к свойству впоследствии будет возвращаться undefined.
+-->
+
+<html>
+<head>
+    <title>Оператор delete</title>
+
+    <script type="text/javascript">
+
+        var car = {
+            color: "black",
+            weight: 3000,
+            go: function () { alert("GO!"); },
+
+            testProp: undefined
+        }
+
+        console.log(car.weight);
+
+        // Удаляем свойство "weight"объекта "car".
+        delete car.weight;
+
+        // Проверяем наличие свойства в объекте.
+        console.log(car.weight);
+        console.log("weight" in car);
+
+        console.log("testProp" in car);
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

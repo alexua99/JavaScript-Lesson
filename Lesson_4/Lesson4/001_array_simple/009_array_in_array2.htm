@@ -1,0 +1,40 @@
+﻿<!--
+    Многомерные массивы — массивы, содержащие более одного индекса.
+    Чтобы создать многомерный массив в JavaScript, достаточно в качестве значений элементов массива использовать новые массивы.    
+-->
+<html>
+<head>
+    <title>Массив из массивов</title>
+
+    <script>
+
+        var array = new Array(5);
+
+        var count = 1;
+
+        for (var i = 0; i < array.length; i++) {
+
+            array[i] = new Array(10);
+
+            for (var j = 0; j < array[i].length; j++) {
+                array[i][j] = count++;
+            }
+        }
+
+        for (var i = 0; i < array.length; i++) {
+            document.write(array[i] + "<br/>");
+        }
+
+        console.log(array);
+
+        
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+</html>

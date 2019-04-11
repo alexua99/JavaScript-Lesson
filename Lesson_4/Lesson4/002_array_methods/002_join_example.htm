@@ -1,0 +1,46 @@
+﻿<!--
+    Метод Join()
+-->
+
+<html>
+
+<head>
+    <title>Метод Join()</title>
+
+    <style>
+        ul{
+            display: inline-block;
+        }
+    </style>
+
+    <script>
+
+        var fruits = ["яблоко", "груша", "слива", "апельсин"];
+        var fruits01 = ["яблоко", "груша", "слива", "апельсин"];
+        // document.write(fruits  + '<br/>')
+        document.write("<ul><li>");
+
+        var changed_array = fruits.join("</li><li>");
+        var changed_array01 = fruits01.join("</li><li>");
+
+        document.write(changed_array);
+
+        document.write("</li></ul>");
+        var fruits01 = ["яблоко", "груша", "слива", "апельсин"];
+        document.write("<ul><li>");
+        var changed_array01 = fruits01.join("</li><li>");
+        document.write(changed_array01);
+
+        document.write("</li></ul>");
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Разметка страници -->
+
+</body>
+
+</html>
