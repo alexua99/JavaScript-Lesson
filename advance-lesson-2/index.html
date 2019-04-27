@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="container">
+
+</div>
+    <script>
+        class Car {
+            constructor(CarName){
+                this.name= CarName;
+                var isRun= false;
+                 document.getElementsById('container').innerHtml = '<div id="c">ssss</div>';
+                this.carRun01 = document.getElementById("c");
+                this.setRun = x => isRun = x;
+                this.getRun = () => isRun;
+            }
+Run() {
+    if (!this.getRun()) {
+        this.setRun(true);
+
+        document.writeln(`${this.name} start run ${this.carRun01}`);
+    }
+}
+Stop() {
+    if (this.getRun()) {
+        this.setRun(true);
+        document.writeln(`${this.name} start run`);
+    }
+}
+            }
+    </script>
+</body>
+
+</html>

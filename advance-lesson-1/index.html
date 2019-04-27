@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+       
+
+        class chngeName {
+            constructor(name, age, lasName){
+                this.name = name;
+                this.age = age;
+                this.soname = lasName;
+            }
+        }
+        var a = new chngeName ('Sasha', 27, 'Koles');
+        var a1 = new chngeName ('vasiasha', 77, 'shole')
+        var a2 = new chngeName ('Oleks', 33, 'Smolr')
+        var arry = [a, a1, a2];
+        var a33 = arry.sort((x,y) => x.age - y.age);
+        console.log(a33);
+        
+        
+        
+    </script>
+</body>
+</html>

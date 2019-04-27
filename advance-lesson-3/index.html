@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div{
+            font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: inline;
+            padding: 200px;
+            background-color: blue;
+            transform: translate(-50%, -50%);
+            border-radius: 100px;
+            font-size: 200px;
+            transition: all 3s;
+            color: aliceblue;
+            border: 10px dashed black;
+        }
+        </style>
+</head>
+<body>
+    <!-- <div onmousedown="obj(this)" onmouseup="obj1(this)">Sasha</div> -->
+    <input type="text" id="name" onchange="nameF()">
+    <script>
+        function nameF (){
+            var x = document.getElementById('name');
+            var first = x.value[0].toUpperCase();
+            var arr = x.value.split('');
+            arr[0] = first;
+            x.value = arr.join('');
+            //x.value[0] = x.value[0].toUpperCase();
+
+        };
+    // function obj (a){
+    //     a.style.borderColor = '#fff'
+    //     a.style.backgroundColor = 'black';
+    //     a.style.color = 'red';
+    //     const name = "John";
+    //     a.innerHTML = name;
+    // }
+    // function obj1 (a){
+        
+    //     a.style.backgroundColor = 'blue';
+    //     a.style.color = 'aliceblue';
+    //     const name = "Sasha";
+    //     a.innerHTML = name;
+    // }
+    </script>
+
+</body>
+</html>

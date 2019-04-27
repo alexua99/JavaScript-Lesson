@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.stars{
+  display: flex;
+}
+
+.stars svg{
+  cursor: pointer;
+}
+
+.stars .star {  
+  width:30px;
+  height:30px;
+  background-color:grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.star.active, .star.chosen {
+  color:yellow;
+}
+</style>
+
+<body>
+    <div class='stars'>
+        <div class='star'>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class='star'>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class='star'>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class='star'>
+            <i class="fas fa-star"></i>
+        </div>
+        <div class='star'>
+            <i class="fas fa-star"></i>
+        </div>
+    </div>
+
+
+    <script>
+     function chooseStar(star, className, proceedFunction) {
+            const starClass = 'star';
+
+            let childs = star.parentNode.childNodes;
+
+            childs.forEach(item => {
+                if(item.classList) item.classList.remove(className);
+            });
+
+            for(let i=0; i < childs.length; i++) {
+                let item = childs[i];
+
+                if(!item.className || !item.className.includes(starClass)) {
+                    continue;
+                }
+                proceedFunction(item, className);
+                //item.classList.add(className);
+                if(item == star) break;
+            }
+        }
+        
+        //Start
+        document.querySelectorAll('.star').forEach(item => {
+            console.log(item);
+          
+            item.addEventListener("mouseover", _ => {
+                console.log("hover");
+              chooseStar(item, 'active', (star, className) => {
+                star.classList.add(className);
+              });
+              //item.classList.add("active");
+          });
+          
+            item.addEventListener("mouseout", _ => {
+                console.log("hover");
+              chooseStar(item, 'active', (star, className) => {
+                star.classList.remove(className);
+              });
+              //item.classList.add("active");
+          });  
+          
+            item.addEventListener("click", _ => {
+                console.log("hover");
+              chooseStar(item, 'chosen', (star, className) => {
+                star.classList.add(className);
+              });
+              //item.classList.add("active");
+          });  
+        });
+
+    </script>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+        integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

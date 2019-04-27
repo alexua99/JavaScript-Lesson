@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <style>
+        .bar {
+            transition: 5s;
+            width: 100px;
+            height: 20px;
+            background: red;
+        }
+
+
+        .bar.full,
+        .bar:hover {
+            width: 500px;
+            background: yellow;
+        }
+    </style>
+    </body>
+</head>
+
+<body>
+    <div class='bar' id='bar'>
+
+    </div>
+    <button id="btnSize">Size</button>
+
+
+    <script>
+        class A{
+            constructor(startBorder, el){
+                this.el = el;
+                this.startBorder = startBorder;
+            }
+            increse(){
+                this.startBorder += 100;
+                this.el.onmouseover = () => {
+                    this.el.style.width = `${this.startBorder}px`;
+                }
+                this.el.onmouseout = () => {
+                    this.el.style.width = '100px'
+                }
+            }
+        }
+        const bindControls = () => {
+            var a = new A(500, document.getElementById('bar'));
+            document.getElementById('btnSize').onclick = () => a.increse();
+
+        }
+        bindControls();
+    </script>
+</body>
+
+</html>
